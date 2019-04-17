@@ -1,0 +1,24 @@
+.tr_open {
+  padding: 0;
+  display: flex;
+  flex-basis: 100%;
+  justify-content: space-between;
+  border: 1px solid #999;
+background-color: #fff;
+}
+
+.tr_close {
+  padding: 0;
+  display: flex;
+  flex-basis: 100%;
+  justify-content: space-between;
+  border: 1px solid #999;
+background-color: gray;
+}
+
+.td_check {
+  /* padding-left: 1rem; */
+  display: flex;
+  flex-basis: 25%;
+  justify-content: center;
+}

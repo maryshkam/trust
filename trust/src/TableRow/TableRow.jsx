@@ -1,17 +1,14 @@
 import React from 'react';
+import './TableRow.css';
 
-const TableRow = ({el, time}) => {
-  console.log(el.tradingHours);
+const TableRow = ({el, isOpen}) => {
+  
   return (
     <div>
-      <tr className='tr'>
-        <td className='td'></td>
+      <tr className={isOpen ? 'tr_open' : 'tr_close'}>
         <td className='td'>{el.instrumentID}</td>
         <td className='td'>{el.name}</td>
-        
-{/*  {el.tradingHours.some(elem=> elem.from <= {time} && {time} <= elem.to ? <td className='td'>open</td> : <td className='td'>close</td>)} */}
-
-        <td className='td'>{el.tradingHours.some(elem=> elem.from <= {time} && {time} <= elem.to ? <td className='td'>'open'</td> : <td className='td'>'close'</td>)}
+        <td className='td'>{isOpen ? 'open' : 'close'}
 </td>
       </tr>
     </div>

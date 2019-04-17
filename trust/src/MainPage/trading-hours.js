@@ -1,4 +1,4 @@
-[
+const hoursArr = [
   {
     "instrumentID": 1,
     "name": "EUR/USD",
@@ -1848,3 +1848,6 @@
     ]
   }
 ]
+
+
+export default hoursArr;
