@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import './TableRow.css';
 
 const TableRow = ({el, isOpen}) => {
@@ -13,6 +14,20 @@ const TableRow = ({el, isOpen}) => {
       </tr>
     </div>
   );
+};
+
+TableRow.propTypes = {
+  isOpen: PropTypes.func,
+  el: PropTypes.shape ({
+    instrumentID: PropTypes.number.isRequired,
+    name: PropTypes.string.isRequired,
+    tradingHours: PropTypes.arrayOf (
+      PropTypes.shape({
+        from: PropTypes.number.isRequired,
+        to: PropTypes.number.isRequired
+      })
+    )
+  })
 };
 
 export default TableRow;

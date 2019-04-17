@@ -16,6 +16,7 @@ class MainPage extends Component {
 
   isOpen = el => {
     const time = new Date().getTime();
+    console.log(time);
     return el.tradingHours.some(elem => {
       if (elem.from <= time && time <= elem.to) {
         el.isOpened = true;
